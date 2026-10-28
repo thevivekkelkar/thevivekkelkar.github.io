@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivek Kelkar | AIML Engineer & Cyber Security Enthusiast</title>
+  <meta name="description" content="Portfolio of Vivek Kelkar — 3rd-year B.Tech AIML student specializing in Machine Learning, Deep Learning, Computer Vision, and Network Security Research.">
+  <meta name="keywords" content="Vivek Kelkar, AIML, Machine Learning, Deep Learning, Cyber Security, Networking, Portfolio, thevivekkelkar">
+  <meta name="author" content="Vivek Kelkar">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="Vivek Kelkar | AIML & Deep Learning Portfolio">
+  <meta property="og:description" content="3rd-year B.Tech AIML student architecting neural networks, deep learning models, and researching AI-powered network security.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thevivekkelkar.github.io/">
+
+  <!-- Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Matrix Rain Canvas Overlay -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- CRT Scanline overlay effect -->
+  <div class="scanlines"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="app-container nav-inner">
+      <a href="#hero" class="brand-prompt">
+        <span class="status-dot"></span>
+        <span class="prompt-user">root@thevivekkelkar</span><span class="prompt-symbol">:~$</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about" data-section="about"><span class="nav-num">// 01_</span>ABOUT <kbd class="nav-key">1</kbd></a></li>
+          <li><a href="#stack" data-section="stack"><span class="nav-num">// 02_</span>STACK <kbd class="nav-key">2</kbd></a></li>
+          <li><a href="#projects" data-section="projects"><span class="nav-num">// 03_</span>PROJECTS <kbd class="nav-key">3</kbd></a></li>
+          <li><a href="#security-lab" data-section="security-lab"><span class="nav-num">// 04_</span>CYBER_LAB <kbd class="nav-key">4</kbd></a></li>
+          <li><a href="#cli-terminal" data-section="cli-terminal"><span class="nav-num">// 05_</span>TERMINAL <kbd class="nav-key">5</kbd></a></li>
+          <li><a href="#contact" data-section="contact"><span class="nav-num">// 06_</span>CONTACT <kbd class="nav-key">6</kbd></a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="soundToggle" class="nav-btn" title="Toggle Mechanical Audio Sound Effects">
+          <span>🔇</span> <span>AUDIO: OFF</span>
+        </button>
+        <button id="scanlineToggle" class="nav-btn primary" title="Toggle CRT Scanline Effect">
+          <span>📺</span> <span>CRT: ON</span>
+        </button>
+        <button id="themeToggle" class="nav-btn" title="Cycle Terminal Color Theme">
+          <span>🎨</span> <span>THEME: GREEN</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="terminal-window">
+        <div class="window-header">
+          <div class="window-controls">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title">
+            <span>zsh</span> — <span>thevivekkelkar@portfolio:~</span>
+          </div>
+          <div class="window-meta">
+            <span>UPTIME: <span id="systemUptime">CALCULATING...</span></span>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <!-- Boot Sequence Log -->
+          <div class="boot-sequence">
+            <div>> initializing_neural_kernel... <span class="ok">[ OK ]</span></div>
+            <div>> loading_aiml_modules: <span class="cyan">PyTorch, TensorFlow, OpenCV, Scikit-Learn, Hugging Face</span>... <span class="ok">[ LOADED ]</span></div>
+            <div>> establishing_packet_telemetry & networking_subsystems... <span class="ok">[ READY ]</span></div>
+            <div>> verifying_operator_biometrics: <span class="ok">Vivek Kelkar [MATCH: 99.8%]</span></div>
+            <div>> authenticated_user: <span class="ok">Vivek Kelkar (AIML 3rd Year · Vibe Coder & Security Researcher)</span></div>
+          </div>
+
+          <!-- Hero Profile Container with Biometric Photo HUD -->
+          <div class="hero-profile-container">
+            <!-- Left: Cyber Biometric HUD Photo Card -->
+            <div class="biometric-hud-card">
+              <div class="hud-corner hud-top-left"></div>
+              <div class="hud-corner hud-top-right"></div>
+              <div class="hud-corner hud-bottom-left"></div>
+              <div class="hud-corner hud-bottom-right"></div>
+
+              <div class="hud-header">
+                <span class="hud-label"><span class="status-dot"></span> BIOMETRIC_ID // OK</span>
+                <span class="hud-id">VK-AIML-PUNE</span>
+              </div>
+
+              <div class="hud-image-wrapper">
+                <img src="assets/profile-portrait.png" alt="Vivek Kelkar - AIML & Cyber Security Engineer" class="hud-photo" loading="eager">
+                <div class="hud-reticle"></div>
+                <div class="hud-scanner-bar"></div>
+              </div>
+
+              <div class="hud-telemetry">
+                <div class="hud-meta-row"><span>OPERATOR:</span> <strong style="color: #fff;">VIVEK KELKAR</strong></div>
+                <div class="hud-meta-row"><span>ROLE:</span> <span style="color: var(--term-cyan);">AIML & VIBE CODER</span></div>
+                <div class="hud-meta-row"><span>LOCATION:</span> <span>PUNE (MH), INDIA</span></div>
+                <div class="hud-meta-row"><span>RESEARCH:</span> <span style="color: var(--term-amber);">ETHICAL SEC // NET</span></div>
+                <div class="hud-meta-row"><span>FACE_MATCH:</span> <span style="color: var(--term-green);">99.8% VERIFIED</span></div>
+              </div>
+            </div>
+
+            <!-- Right: Hero Header Info & Bio -->
+            <div>
+              <div class="hero-header-area">
+                <div class="cli-badge-group">
+                  <span class="cli-pill active"><span class="status-dot"></span> OPEN FOR ML/DL INTERNSHIPS</span>
+                  <span class="cli-pill cyan">⚡ 3RD YEAR B.TECH AIML</span>
+                  <span class="cli-pill" style="border-color: rgba(245, 158, 11, 0.45); color: var(--term-amber); background: rgba(245, 158, 11, 0.08);">🏆 SMART INDIA HACKATHON (SIH)</span>
+                  <span class="cli-pill" style="border-color: rgba(0, 240, 255, 0.45); color: var(--term-cyan); background: rgba(0, 240, 255, 0.08);">🚀 META HACKATHON ACHIEVER</span>
+                  <span class="cli-pill" style="border-color: rgba(245, 158, 11, 0.45); color: var(--term-amber); background: rgba(245, 158, 11, 0.08);">🛡️ ETHICAL HACKER · ERP DISCLOSURE</span>
+                  <span class="cli-pill" style="border-color: rgba(168, 85, 247, 0.45); color: #d8b4fe; background: rgba(168, 85, 247, 0.08);">🔮 VIBE CODING & AGENTIC AI</span>
+                  <span class="cli-pill">📍 PUNE (MH) INDIA</span>
+                </div>
+
+                <h1 class="hero-title">
+                  Hi, I'm <span class="name-gradient">Vivek Kelkar</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                  <span>AIML Engineer · Deep Learning · Vibe Coding & Ethical Security</span>
+                  <span class="cursor-blink">_</span>
+                </div>
+              </div>
+
+              <p class="hero-bio">
+                Third-year <strong>B.Tech in Artificial Intelligence & Machine Learning (AIML)</strong> student based in Pune. 
+                Currently architecting <strong>Deep Learning & Computer Vision models</strong>, mastering <strong>Vibe Coding & Agentic AI workflows</strong> for rapid prototyping, and actively researching 
+                <strong>Cybersecurity, Network Protocol Telemetry, and Ethical Vulnerability Disclosure</strong>.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#cli-terminal" class="btn btn-primary">
+                  <span>>_ Open Terminal</span>
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                  <span>Explore Projects (5)</span>
+                </a>
+                <a href="#security-lab" class="btn btn-outline" style="border-color: rgba(245, 158, 11, 0.4); color: var(--term-amber);">
+                  <span>ERP Disclosure Case Study 🛡️</span>
+                </a>
+                <a href="https://github.com/thevivekkelkar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                  <span>GitHub Profile ↗</span>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                  <span>Initiate Contact</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neofetch / System Profile Information Card -->
+          <div class="neofetch-card">
+            <div class="ascii-art">
+   /\_/\  
+  ( o.o )  VIVEK KELKAR
+   > ^ <   AIML // CYBER
+ /|     |\ 
+(_|     |_)
+            </div>
+            <div class="neofetch-stats">
+              <div class="neofetch-user-header">vivek@aiml-workstation</div>
+              <div class="stat-row"><span class="stat-key">OS:</span><span class="stat-val">Arch Linux x86_64 / Debian</span></div>
+              <div class="stat-row"><span class="stat-key">Host:</span><span class="stat-val">B.Tech AIML (Year 3 / Class of 2026 - 27)</span></div>
+              <div class="stat-row"><span class="stat-key">Kernel:</span><span class="stat-val">Neural-DL-Core-v3.8</span></div>
+              <div class="stat-row"><span class="stat-key">Current Focus:</span><span class="stat-val">Deep Learning, Computer Vision, Vibe Coding</span></div>
+              <div class="stat-row"><span class="stat-key">Hackathons:</span><span class="stat-val" style="color: var(--term-amber);">Smart India Hackathon (SIH) · Meta Hackathon</span></div>
+              <div class="stat-row"><span class="stat-key">Security Cred:</span><span class="stat-val" style="color: var(--term-green);">College ERP Vulnerability Responsible Disclosure (Dec 2025)</span></div>
+              <div class="stat-row"><span class="stat-key">Research R&D:</span><span class="stat-val">Network Anomaly Detection & AI Defensive Telemetry</span></div>
+              <div class="stat-row"><span class="stat-key">Shell:</span><span class="stat-val">zsh 5.9 (x86_64-pc-linux-gnu)</span></div>
+              <div class="stat-row"><span class="stat-key">Status:</span><span class="stat-val" style="color: var(--term-green);">Training Loss: 0.0142 | Accuracy: 98.7%</span></div>
+              <div class="color-blocks">
+                <span class="c-block" style="background:#000;"></span>
+                <span class="c-block" style="background:#ef4444;"></span>
+                <span class="c-block" style="background:#10b981;"></span>
+                <span class="c-block" style="background:#f59e0b;"></span>
+                <span class="c-block" style="background:#3b82f6;"></span>
+                <span class="c-block" style="background:#a855f7;"></span>
+                <span class="c-block" style="background:#00f0ff;"></span>
+                <span class="c-block" style="background:#ffffff;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         01_ABOUT SECTION
+         ==================================================================== -->
+    <section id="about" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 01_ABOUT</span>
+        <span>·</span>
+        <span>cat bio.md</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> whoami --detailed
+      </h2>
+      <p class="section-desc">
+        A deep-dive into my engineering journey, academic specialization in AIML, and why I believe the intersection of Deep Learning and Cybersecurity is the future.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card about-text">
+          <p>
+            Hello! I'm <strong>Vivek Kelkar</strong>, currently in my <strong>3rd year of B.Tech in Artificial Intelligence & Machine Learning (AIML)</strong>. 
+            My primary domain of active development is centered on <strong>Machine Learning (ML)</strong> and <strong>Deep Learning (DL)</strong> — training neural network models, tuning hyperparameters, building computer vision pipelines, and deploying predictive algorithms.
+          </p>
+          <p>
+            Alongside my core AI coursework, I have built a solid foundation in <strong>Cybersecurity and Computer Networking</strong>. Understanding how packets traverse the internet, analyzing raw TCP/IP headers, studying network protocols, and exploring defensive security principles have always fascinated me.
+          </p>
+          <p>
+            While I haven't deployed full-scale standalone cybersecurity applications in the past, that background is now fueling my next chapter: 
+            <strong>engineering intelligent AI-powered intrusion detection systems, network anomaly classifiers, and automated defensive telemetry</strong>.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div class="highlight-box">
+            <div class="highlight-title">
+              <span>🧠</span> <span>Deep Learning & Neural Architectures</span>
+            </div>
+            <div class="highlight-desc">
+              Building CNNs, transfer learning pipelines, and predictive algorithms using PyTorch and TensorFlow for complex data recognition.
+            </div>
+          </div>
+
+          <div class="highlight-box cyan">
+            <div class="highlight-title">
+              <span>👁️</span> <span>Computer Vision & Real-Time Analytics</span>
+            </div>
+            <div class="highlight-desc">
+              Implementing object detection, frame-by-frame telemetry, and real-time visual tracking with OpenCV and YOLO.
+            </div>
+          </div>
+
+          <div class="highlight-box amber">
+            <div class="highlight-title">
+              <span>🛡️</span> <span>Cybersecurity & Network Protocols</span>
+            </div>
+            <div class="highlight-desc">
+              Deep interest in TCP/IP, packet analysis, Wireshark, defensive Linux hardening, and crafting upcoming AI-driven intrusion detectors.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats / Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">3rd</div>
+          <div class="metric-label">Year B.Tech AIML</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num cyan">15+</div>
+          <div class="metric-label">ML/DL Experiments & Models</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">Dedication to Neural Code</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num cyan">2028</div>
+          <div class="metric-label">Graduation Target</div>
+        </div>
+      </div>
+
+      <!-- Hackathons & Engineering Accolades Grid -->
+      <div style="margin-top: 2.75rem;">
+        <div class="section-tag" style="margin-bottom: 0.35rem;">
+          <span>// HONORS & ACHIEVEMENTS</span>
+          <span>·</span>
+          <span>cat accolades.json</span>
+        </div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="color: var(--term-green);">$</span> git log --merits --hackathons
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          National and global hackathon achievements verified on my LinkedIn profile.
+        </p>
+
+        <div class="accolades-grid">
+          <!-- Smart India Hackathon Card -->
+          <div class="accolade-card gold">
+            <div class="accolade-header">
+              <span class="accolade-badge gold">
+                <span>🏆</span> <span>NATIONAL HACKATHON</span>
+              </span>
+              <span style="font-size: 0.72rem; color: var(--term-dim);">SIH · GOVT OF INDIA</span>
+            </div>
+            <h4 class="accolade-title">Smart India Hackathon (SIH)</h4>
+            <div class="accolade-org">
+              <span>🏛️</span> <span>Ministry of Education & AICTE, Govt. of India</span>
+            </div>
+            <p class="accolade-desc">
+              Competed in India's flagship nationwide open innovation hackathon. Architected intelligent technology solutions addressing real-world problem statements, collaborating in an intensive multi-day sprint focused on AI/ML algorithms, systems engineering, and rapid deployment.
+            </p>
+            <div class="accolade-tags">
+              <span class="accolade-tag">#SmartIndiaHackathon</span>
+              <span class="accolade-tag">#AICTE</span>
+              <span class="accolade-tag">#MachineLearning</span>
+              <span class="accolade-tag">#TeamSprint</span>
+              <span class="accolade-tag">#NationalLevel</span>
+            </div>
+          </div>
+
+          <!-- Meta Hackathon Card -->
+          <div class="accolade-card cyan">
+            <div class="accolade-header">
+              <span class="accolade-badge cyan">
+                <span>🚀</span> <span>GLOBAL INNOVATION</span>
+              </span>
+              <span style="font-size: 0.72rem; color: var(--term-dim);">META DEVELOPER</span>
+            </div>
+            <h4 class="accolade-title">Meta Developer Hackathon</h4>
+            <div class="accolade-org">
+              <span>🌐</span> <span>Meta Platforms & Developer Community</span>
+            </div>
+            <p class="accolade-desc">
+              Engineered cutting-edge software during the Meta Hackathon, exploring state-of-the-art open models, API integrations, and vibe coding workflows. Rapidly designed and implemented full-stack prototypes addressing modern user needs with high-performance intelligence.
+            </p>
+            <div class="accolade-tags">
+              <span class="accolade-tag">#MetaHackathon</span>
+              <span class="accolade-tag">#GenerativeAI</span>
+              <span class="accolade-tag">#VibeCoding</span>
+              <span class="accolade-tag">#DeveloperAPIs</span>
+              <span class="accolade-tag">#Llama</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02_STACK SECTION
+         ==================================================================== -->
+    <section id="stack" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 02_STACK</span>
+        <span>·</span>
+        <span>sudo apt install technical-skills</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> ls -la /usr/bin/skills/
+      </h2>
+      <p class="section-desc">
+        Technologies, libraries, frameworks, and system tools I leverage across machine learning, deep learning, software engineering, and network security exploration.
+      </p>
+
+      <div class="stack-grid">
+        <!-- 1. ML & Deep Learning -->
+        <div class="stack-category-card">
+          <div class="category-header">
+            <span class="category-icon">🧠</span>
+            <span>Machine Learning & DL</span>
+            <span class="category-badge">CORE DOMAIN</span>
+          </div>
+          <div class="skills-list">
+            <span class="skill-chip core">PyTorch</span>
+            <span class="skill-chip core">TensorFlow / Keras</span>
+            <span class="skill-chip core">Scikit-Learn</span>
+            <span class="skill-chip core">OpenCV (Computer Vision)</span>
+            <span class="skill-chip">Convolutional Neural Networks (CNN)</span>
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">Matplotlib / Seaborn</span>
+            <span class="skill-chip">Transfer Learning</span>
+            <span class="skill-chip">Data Preprocessing & Augmentation</span>
+          </div>
+        </div>
+
+        <!-- 2. Core Programming Languages -->
+        <div class="stack-category-card">
+          <div class="category-header">
+            <span class="category-icon">💻</span>
+            <span>Programming Languages</span>
+            <span class="category-badge">LANGUAGES</span>
+          </div>
+          <div class="skills-list">
+            <span class="skill-chip core">Python (Advanced)</span>
+            <span class="skill-chip">C / C++ (Algorithms & Systems)</span>
+            <span class="skill-chip">SQL (PostgreSQL / MySQL)</span>
+            <span class="skill-chip">Bash / Shell Scripting</span>
+            <span class="skill-chip">HTML5 / CSS3 / JavaScript</span>
+          </div>
+        </div>
+
+        <!-- 3. Cybersecurity & Networking (Lab & Interests) -->
+        <div class="stack-category-card">
+          <div class="category-header">
+            <span class="category-icon">🛡️</span>
+            <span>Cybersecurity & Networking</span>
+            <span class="category-badge">RESEARCH LAB</span>
+          </div>
+          <div class="skills-list">
+            <span class="skill-chip research">TCP/IP & OSI Model</span>
+            <span class="skill-chip research">Packet Analysis & Sniffing</span>
+            <span class="skill-chip research">Wireshark</span>
+            <span class="skill-chip research">Network Sockets & Telemetry</span>
+            <span class="skill-chip" style="color: var(--term-amber); border-color: rgba(245, 158, 11, 0.35);">ERP Vulnerability Auditing</span>
+            <span class="skill-chip" style="color: var(--term-amber); border-color: rgba(245, 158, 11, 0.35);">Responsible Disclosure</span>
+            <span class="skill-chip">Nmap / Port Scanning Basics</span>
+            <span class="skill-chip">Linux System Hardening</span>
+            <span class="skill-chip">Intrusion Detection Concepts</span>
+            <span class="skill-chip">Cryptography Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- 4. Developer Tools & Infrastructure -->
+        <div class="stack-category-card">
+          <div class="category-header">
+            <span class="category-icon">⚙️</span>
+            <span>Tools & Infrastructure</span>
+            <span class="category-badge">ENV</span>
+          </div>
+          <div class="skills-list">
+            <span class="skill-chip core">Git & GitHub</span>
+            <span class="skill-chip">Linux (Ubuntu / Debian / CLI)</span>
+            <span class="skill-chip">Docker Basics</span>
+            <span class="skill-chip">VS Code & Neovim</span>
+            <span class="skill-chip">Jupyter Notebooks</span>
+            <span class="skill-chip">Google Colab & Kaggle</span>
+            <span class="skill-chip">kubernetes</span>
+            <span class="skill-chip">hugging face</span>
+          </div>
+        </div>
+
+        <!-- 5. Vibe Coding & Agentic AI -->
+        <div class="stack-category-card">
+          <div class="category-header">
+            <span class="category-icon" style="color: #c084fc;">🔮</span>
+            <span>Vibe Coding & Agentic AI</span>
+            <span class="category-badge" style="color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">NEXT-GEN DEV</span>
+          </div>
+          <div class="skills-list">
+            <span class="skill-chip vibe">Vibe Coding Workflows</span>
+            <span class="skill-chip vibe">LLM Prompt Engineering</span>
+            <span class="skill-chip vibe">Autonomous Coding Agents</span>
+            <span class="skill-chip vibe">Rapid System Prototyping</span>
+            <span class="skill-chip vibe">AI-Assisted Architecture</span>
+            <span class="skill-chip vibe">Hugging Face Models</span>
+            <span class="skill-chip vibe">Cursor / Antigravity Orchestration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03_PROJECTS SECTION
+         ==================================================================== -->
+    <section id="projects" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 03_PROJECTS</span>
+        <span>·</span>
+        <span>find ./projects -type f -name "*.py"</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> git status --projects
+      </h2>
+      <p class="section-desc">
+        A selection of my machine learning and deep learning projects, along with active research architectures bridging artificial intelligence with network security telemetry.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">[ All Systems (5) ]</button>
+        <button class="filter-btn" data-filter="mldl">[ ML & Deep Learning ]</button>
+        <button class="filter-btn" data-filter="vision">[ Computer Vision ]</button>
+        <button class="filter-btn" data-filter="cyber">[ Cyber & Network Labs ]</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: Smart City Traffic -->
+        <div class="project-card" data-category="mldl vision">
+          <div class="project-card-header">
+            <span class="project-path">📁 /projects/smartcity-traffic</span>
+            <span class="project-status status-prod">[PROD]</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Smart City Intelligent Traffic Analysis</h3>
+            <p class="project-summary">
+              A computer vision and deep learning powered smart city system for real-time vehicle detection, lane density estimation, and traffic bottleneck prediction.
+            </p>
+            <ul class="project-features">
+              <li>Real-time video stream ingestion and vehicle counting</li>
+              <li>Convolutional object detection & multi-class classification</li>
+              <li>Congestion heatmaps & automated density metrics</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag-badge">Python</span>
+              <span class="tag-badge">OpenCV</span>
+              <span class="tag-badge">PyTorch</span>
+              <span class="tag-badge">Computer Vision</span>
+              <span class="tag-badge">NumPy</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/thevivekkelkar/smartcity-traffic" target="_blank" rel="noopener noreferrer" class="project-link primary">
+              <span>View Source on GitHub ↗</span>
+            </a>
+            <span class="tag-badge">v1.2.0</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Deep Learning Image Classifier -->
+        <div class="project-card" data-category="mldl vision">
+          <div class="project-card-header">
+            <span class="project-path">📁 /projects/dl-neural-classifier</span>
+            <span class="project-status status-prod">[ACTIVE]</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Deep Neural Vision Classification Engine</h3>
+            <p class="project-summary">
+              Custom deep convolutional neural network built with PyTorch, featuring automated data augmentation, transfer learning backbones, and hyperparameter optimization.
+            </p>
+            <ul class="project-features">
+              <li>ResNet / EfficientNet transfer learning integration</li>
+              <li>Custom cross-entropy loss with learning rate warmups</li>
+              <li>98.4% validation accuracy with confusion matrix analysis</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag-badge">PyTorch</span>
+              <span class="tag-badge">Torchvision</span>
+              <span class="tag-badge">Deep Learning</span>
+              <span class="tag-badge">Matplotlib</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/thevivekkelkar" target="_blank" rel="noopener noreferrer" class="project-link primary">
+              <span>Inspect Code Repository ↗</span>
+            </a>
+            <span class="tag-badge">PyTorch</span>
+          </div>
+        </div>
+
+        <!-- Project 3: AI-Powered Network Intrusion Detector (Upcoming Cyber Project) -->
+        <div class="project-card upcoming" data-category="cyber mldl">
+          <div class="project-card-header">
+            <span class="project-path">📁 /projects/ai-network-ids</span>
+            <span class="project-status status-research">[ACTIVE R&D]</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AI-Powered Network Intrusion & Threat Detector</h3>
+            <p class="project-summary">
+              An upcoming cybersecurity research project combining Deep Learning classifiers with raw network packet telemetry (NSL-KDD / CICIDS flows) to detect zero-day anomalies and DDoS patterns.
+            </p>
+            <ul class="project-features">
+              <li>Low-latency packet flow feature extraction</li>
+              <li>Supervised & Unsupervised anomaly clustering models</li>
+              <li>Automated alert generation for port scans & SYN flood attacks</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag-badge">Cybersecurity</span>
+              <span class="tag-badge">Deep Learning</span>
+              <span class="tag-badge">Scapy</span>
+              <span class="tag-badge">Packet Telemetry</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#security-lab" class="project-link primary">
+              <span>View Security Lab Roadmap ↓</span>
+            </a>
+            <span class="tag-badge" style="color: var(--term-cyan);">ROADMAP</span>
+          </div>
+        </div>
+
+        <!-- Project 4: NLP Document & Sentiment Engine -->
+        <div class="project-card" data-category="mldl">
+          <div class="project-card-header">
+            <span class="project-path">📁 /projects/nlp-insights-engine</span>
+            <span class="project-status status-prod">[DEPLOYED]</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">NLP Sentiment & Document Intelligence Engine</h3>
+            <p class="project-summary">
+              Natural Language Processing pipeline for extracting sentiment nuances, entity relationships, and document summarization using contextual embeddings.
+            </p>
+            <ul class="project-features">
+              <li>Tokenization, stop-word filtering & lemmatization pipeline</li>
+              <li>Transformer & TF-IDF hybrid feature representations</li>
+              <li>Fast inference endpoint for real-time text analysis</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag-badge">Python</span>
+              <span class="tag-badge">NLP</span>
+              <span class="tag-badge">Scikit-Learn</span>
+              <span class="tag-badge">HuggingFace</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/thevivekkelkar" target="_blank" rel="noopener noreferrer" class="project-link primary">
+              <span>View Source on GitHub ↗</span>
+            </a>
+            <span class="tag-badge">NLP</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Network Packet Telemetry & Protocol Sniffer -->
+        <div class="project-card" data-category="cyber">
+          <div class="project-card-header">
+            <span class="project-path">📁 /projects/net-packet-telemetry</span>
+            <span class="project-status status-lab">[LAB EXPERIMENT]</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Packet Telemetry & Protocol Dissector</h3>
+            <p class="project-summary">
+              Low-level network telemetry experiment dissecting raw Ethernet, IP, TCP, and UDP frames to inspect socket behaviors and evaluate bandwidth anomalies.
+            </p>
+            <ul class="project-features">
+              <li>Socket-level packet capture & binary header unpacking</li>
+              <li>DNS lookup inspection and connection state tracking</li>
+              <li>Foundation for upcoming AI security integration</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag-badge">Networking</span>
+              <span class="tag-badge">TCP/IP</span>
+              <span class="tag-badge">Sockets</span>
+              <span class="tag-badge">Wireshark</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#security-lab" class="project-link primary">
+              <span>Inspect Lab Simulation ↓</span>
+            </a>
+            <span class="tag-badge" style="color: var(--term-amber);">LAB</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04_CYBERSECURITY & NETWORKING LAB (NARRATIVE & SIMULATOR)
+         ==================================================================== -->
+    <section id="security-lab" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 04_SECURITY_LAB</span>
+        <span>·</span>
+        <span>cd ./cyber-network-lab && ./monitor_telemetry.py</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> netstat --security-roadmap
+      </h2>
+      <p class="section-desc">
+        Bridging artificial intelligence with network security. Here is how my background in networking is translating into real-world cybersecurity engineering.
+      </p>
+
+      <!-- Featured Ethical Hacking Case Study: College ERP Responsible Disclosure -->
+      <div class="security-case-card">
+        <div class="case-header">
+          <div class="case-badge">
+            <span>🛡️</span> <span>RESPONSIBLE VULNERABILITY DISCLOSURE · WHITE-HAT CASE STUDY</span>
+          </div>
+          <span class="case-date">DECEMBER 2025</span>
+        </div>
+
+        <h3 class="case-title">College ERP Broken Authorization & Faculty Profile Data Exposure</h3>
+
+        <p class="case-summary">
+          In December 2025, I conducted an independent ethical security assessment of my college ERP system. During security testing of the endpoint parameters, I uncovered a critical <strong>Broken Object Level Authorization (BOLA / IDOR)</strong> flaw that allowed unauthorized viewing and traversal of restricted faculty profiles and internal staff records. Practicing strict white-hat ethics, I did not download or extract sensitive data; instead, I compiled a comprehensive vulnerability report with reproduction steps and safely disclosed it directly to the college administration and IT department, enabling them to patch the flaw and secure institutional data.
+        </p>
+
+        <div class="case-grid">
+          <div class="case-point">
+            <div class="point-label">TARGET INFRASTRUCTURE</div>
+            <div class="point-value">Institutional College ERP & Faculty Directory Gateway</div>
+          </div>
+          <div class="case-point">
+            <div class="point-label">VULNERABILITY CLASS</div>
+            <div class="point-value" style="color: var(--term-amber);">Broken Object Level Authorization (IDOR)</div>
+          </div>
+          <div class="case-point">
+            <div class="point-label">ETHICAL ACTION</div>
+            <div class="point-value">Zero Data Leakage · Coordinated Responsible Disclosure</div>
+          </div>
+          <div class="case-point">
+            <div class="point-label">OUTCOME & STATUS</div>
+            <div class="point-value" style="color: var(--term-green);">[RESOLVED] Successfully Patched by College IT</div>
+          </div>
+        </div>
+
+        <div class="case-footer">
+          <span class="case-tag">#EthicalHacking</span>
+          <span class="case-tag">#ResponsibleDisclosure</span>
+          <span class="case-tag">#OWASP_Top_10</span>
+          <span class="case-tag">#AccessControl</span>
+          <span class="case-tag">#WhiteHatSecurity</span>
+          <span class="case-tag">#StudentResearcher</span>
+        </div>
+      </div>
+
+      <div class="lab-container">
+        <!-- Narrative & Roadmap -->
+        <div class="lab-narrative">
+          <span class="lab-badge">⚡ ACTIVE RESEARCH DOMAIN</span>
+          <h3>Why AI + Cyber Security?</h3>
+          <p>
+            In the past, I explored the fundamentals of computer networking and defensive cybersecurity — from packet tracing in Wireshark to examining OSI layer protocols. Rather than keeping it as separate theory, my goal as an AIML undergraduate is to 
+            <strong>unite Deep Learning architectures with network telemetry</strong>.
+          </p>
+          <p>
+            Traditional rule-based firewalls struggle against polymorphic payloads and zero-day threats. By deploying neural classifiers directly on live packet streams, we can detect anomalous behavior in micro-seconds.
+          </p>
+
+          <div class="roadmap-timeline">
+            <div class="roadmap-item">
+              <div class="roadmap-title">Phase 1: Protocol & Telemetry Foundations</div>
+              <div class="roadmap-desc">Deep mastery of TCP/IP handshakes, DNS query telemetry, subnetting, and raw socket programming.</div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-title">Phase 2: Deep Learning on Network Datasets</div>
+              <div class="roadmap-desc">Training neural networks on labeled network intrusion datasets (NSL-KDD, CICIDS2017) to classify multi-vector attacks.</div>
+            </div>
+            <div class="roadmap-item upcoming">
+              <div class="roadmap-title">Phase 3: Real-Time Anomaly Detection Engine (Upcoming)</div>
+              <div class="roadmap-desc">Deploying an end-to-end open-source intrusion detector powered by PyTorch and packet stream telemetry.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Packet Sniffer / Anomaly Detector Simulator Widget -->
+        <div class="packet-monitor">
+          <div class="monitor-header">
+            <div class="monitor-status">
+              <span class="status-dot"></span>
+              <span>LIVE PACKET TELEMETRY & AI CLASSIFIER</span>
+            </div>
+            <div class="monitor-controls">
+              <button id="simInjectBtn" class="sim-btn" title="Inject Simulated Threat Packet">+ Inject Attack</button>
+              <button id="simToggleBtn" class="sim-btn active">[ Pause Stream ]</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Packet Feed -->
+          <div class="packet-feed" id="packetFeed">
+            <div class="packet-entry">
+              <span class="packet-time">01:36:12.4</span>
+              <span class="packet-proto">TCP</span>
+              <span class="packet-ips">192.168.1.104:49152 → 142.250.190.46:443</span>
+              <span class="packet-classification class-benign">BENIGN [99.9%]</span>
+            </div>
+            <div class="packet-entry">
+              <span class="packet-time">01:36:13.8</span>
+              <span class="packet-proto">DNS</span>
+              <span class="packet-ips">192.168.1.104:53310 → 8.8.8.8:53</span>
+              <span class="packet-classification class-benign">BENIGN [99.7%]</span>
+            </div>
+            <div class="packet-entry">
+              <span class="packet-time">01:36:15.1</span>
+              <span class="packet-proto">TLSv1.3</span>
+              <span class="packet-ips">192.168.1.104:51220 → 104.244.42.1:443</span>
+              <span class="packet-classification class-benign">BENIGN [99.8%]</span>
+            </div>
+          </div>
+
+          <!-- Live Stats Bar -->
+          <div class="monitor-stats-footer">
+            <span>PACKETS: <strong id="simTotalPackets" style="color:#fff;">1420</strong></span>
+            <span>ANOMALIES DETECTED: <strong id="simAlertPackets" style="color:var(--term-red);">18</strong></span>
+            <span>MODEL DEFENSE RATE: <strong id="simRate" style="color:var(--term-green);">98.7%</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         05_INTERACTIVE_TERMINAL SECTION
+         ==================================================================== -->
+    <section id="cli-terminal" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 05_INTERACTIVE_TERMINAL</span>
+        <span>·</span>
+        <span>/bin/bash --interactive</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> vivek-cli --interactive
+      </h2>
+      <p class="section-desc">
+        Experience the portfolio through an authentic command-line shell. Type any command or click the shortcut chips below to query skills, projects, resume, and secret easter eggs.
+      </p>
+
+      <div class="cli-terminal-window">
+        <div class="window-header">
+          <div class="window-controls">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title">
+            <span>bash</span> — <span>guest@vivek-sandbox:~$</span>
+          </div>
+          <div class="window-meta">
+            <span>SESSION: AUTHENTICATED</span>
+          </div>
+        </div>
+
+        <div class="cli-body">
+          <div class="cli-output" id="terminalOutput">
+            <div class="cli-entry-res">
+Welcome to Vivek Kelkar's interactive terminal console.
+Type <span style="color: var(--term-green); font-weight: bold;">help</span> to inspect accessible directives, or click quick commands below.
+            </div>
+          </div>
+
+          <div class="cli-input-line">
+            <span class="cli-prompt-label">root@thevivekkelkar:~$</span>
+            <input type="text" id="terminalInput" class="cli-input" placeholder="type a command (e.g. whoami, skills, projects, cyber, cat resume)..." autocomplete="off" spellcheck="false" autofocus>
+          </div>
+        </div>
+
+        <!-- Quick Shortcut Commands -->
+        <div class="cli-quick-commands">
+          <span>Quick directives:</span>
+          <button class="quick-cmd-pill" data-cmd="whoami">whoami</button>
+          <button class="quick-cmd-pill" data-cmd="skills">skills</button>
+          <button class="quick-cmd-pill" data-cmd="projects">projects</button>
+          <button class="quick-cmd-pill" data-cmd="hackathons">hackathons</button>
+          <button class="quick-cmd-pill" data-cmd="erp">erp</button>
+          <button class="quick-cmd-pill" data-cmd="cyber">cyber</button>
+          <button class="quick-cmd-pill" data-cmd="cat bio.md">cat bio.md</button>
+          <button class="quick-cmd-pill" data-cmd="cat resume">cat resume</button>
+          <button class="quick-cmd-pill" data-cmd="matrix">matrix</button>
+          <button class="quick-cmd-pill" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06_CONTACT SECTION
+         ==================================================================== -->
+    <section id="contact" class="section-wrapper">
+      <div class="section-tag">
+        <span>// 06_CONTACT</span>
+        <span>·</span>
+        <span>./dispatch_signal.sh</span>
+      </div>
+      <h2 class="section-title">
+        <span class="cmd-prefix">$</span> init_contact()
+      </h2>
+      <p class="section-desc">
+        Interested in collaborating, offering an ML/DL internship, or discussing deep learning & network security research? Send a transmission or connect across social channels.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Direct Connection Endpoints -->
+        <div class="contact-info-card">
+          <div>
+            <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">Connection Channels</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Always open to discussing Machine Learning, Deep Neural Architectures, Computer Vision challenges, and Cybersecurity engineering.
+            </p>
+
+            <div class="contact-links-list">
+              <a href="https://github.com/thevivekkelkar" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-icon">🐙</span>
+                <div class="contact-detail">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">github.com/thevivekkelkar</span>
+                </div>
+              </a>
+
+              <a href="mailto:vivekkelkar2004@gmail.com" class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <div class="contact-detail">
+                  <span class="contact-label">Email Endpoint</span>
+                  <span class="contact-value">vivekkelkar2004@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/vivek-kailas-kelkar-4b015b32b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-icon">💼</span>
+                <div class="contact-detail">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">vivek-kailas-kelkar</span>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div class="contact-detail">
+                  <span class="contact-label">Location / Base</span>
+                  <span class="contact-value">Pune, Maharashtra, India (IST / UTC+5:30)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+            <span>PGP_ID: </span><span style="color: var(--term-green);">AIML-2026-VK-SECURE</span>
+          </div>
+        </div>
+
+        <!-- Contact Transmission Console Form -->
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 1.25rem;">
+            <span>>_ Transmit Encrypted Message</span>
+          </h3>
+
+          <form id="contactForm" action="https://formsubmit.co/vivekkelkar2004@gmail.com" method="POST">
+            <!-- FormSubmit direct inbox routing & configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-group">
+              <label for="contactName" class="form-label">sender_identity [Name]:</label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Mercer" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">return_address [Email]:</label>
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">packet_topic [Subject]:</label>
+              <input type="text" id="contactSubject" name="_subject" class="form-input" placeholder="e.g. ML Internship Opportunity / Collaboration">
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">payload_body [Message]:</label>
+              <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Enter message payload..." required></textarea>
+            </div>
+
+            <div id="formStatus" style="font-size: 0.78rem; margin-bottom: 1rem;"></div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <span>[ TRANSMIT_PACKET() ]</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="app-container footer-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="footer-telemetry">SYSTEM_STATUS: 200 OK</span>
+        <span>·</span>
+        <span>HOST: thevivekkelkar.github.io</span>
+        <span>·</span>
+        <span>AIML B.Tech Year 3</span>
+      </div>
+
+      <div style="color: var(--text-dim);">
+        Designed by Vivek Kelkar &copy; 2026. Terminal-inspired architecture.
+      </div>
+
+      <div>
+        <a href="#hero" class="back-to-top">cd ~ [Top] ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
