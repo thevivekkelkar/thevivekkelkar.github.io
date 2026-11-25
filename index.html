@@ -42,7 +42,7 @@
       </a>
 
       <nav>
-        <ul class="nav-links">
+        <ul id="navLinks" class="nav-links">
           <li><a href="#about" data-section="about"><span class="nav-num">// 01_</span>ABOUT <kbd class="nav-key">1</kbd></a></li>
           <li><a href="#stack" data-section="stack"><span class="nav-num">// 02_</span>STACK <kbd class="nav-key">2</kbd></a></li>
           <li><a href="#projects" data-section="projects"><span class="nav-num">// 03_</span>PROJECTS <kbd class="nav-key">3</kbd></a></li>
@@ -53,16 +53,16 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="soundToggle" class="nav-btn" title="Toggle Mechanical Audio Sound Effects">
+        <button id="soundToggle" class="nav-btn" title="Toggle Mechanical Audio Sound Effects" aria-label="Toggle Sound Effects">
           <span>🔇</span> <span>AUDIO: OFF</span>
         </button>
-        <button id="scanlineToggle" class="nav-btn primary" title="Toggle CRT Scanline Effect">
+        <button id="scanlineToggle" class="nav-btn primary" title="Toggle CRT Scanline Effect" aria-label="Toggle CRT Scanline Effect">
           <span>📺</span> <span>CRT: ON</span>
         </button>
-        <button id="themeToggle" class="nav-btn" title="Cycle Terminal Color Theme">
+        <button id="themeToggle" class="nav-btn" title="Cycle Terminal Color Theme" aria-label="Cycle Terminal Color Theme">
           <span>🎨</span> <span>THEME: GREEN</span>
         </button>
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navLinks">
           <span>☰</span>
         </button>
       </div>
@@ -303,7 +303,7 @@
           <span>·</span>
           <span>cat accolades.json</span>
         </div>
-        <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;">
+        <h3 class="subsection-title" style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
           <span style="color: var(--term-green);">$</span> git log --merits --hackathons
         </h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
@@ -837,7 +837,7 @@ Type <span style="color: var(--term-green); font-weight: bold;">help</span> to i
 
           <div class="cli-input-line">
             <span class="cli-prompt-label">root@thevivekkelkar:~$</span>
-            <input type="text" id="terminalInput" class="cli-input" placeholder="type a command (e.g. whoami, skills, projects, cyber, cat resume)..." autocomplete="off" spellcheck="false" autofocus>
+            <input type="text" id="terminalInput" class="cli-input" placeholder="type a command (e.g. whoami, skills, projects)..." autocomplete="off" spellcheck="false">
           </div>
         </div>
 

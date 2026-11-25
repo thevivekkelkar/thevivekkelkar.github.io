@@ -88,15 +88,29 @@ function initMatrixRain() {
   let w = (canvas.width = window.innerWidth);
   let h = (canvas.height = window.innerHeight);
 
-  window.addEventListener("resize", () => {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  });
-
   const chars = "0101010101アイウエオカキクケコサシスセソタチツテトAIMLDEEPLEARNINGCYBERSEC";
   const fontSize = 14;
-  const columns = Math.floor(w / fontSize);
-  const drops = Array(columns).fill(1);
+  let columns = Math.floor(w / fontSize);
+  let drops = Array(columns).fill(1);
+
+  window.addEventListener("resize", () => {
+    const newW = window.innerWidth;
+    const newH = window.innerHeight;
+    if (newW !== w) {
+      w = canvas.width = newW;
+      h = canvas.height = newH;
+      const newColumns = Math.floor(w / fontSize);
+      if (newColumns > drops.length) {
+        drops = drops.concat(Array(newColumns - drops.length).fill(1));
+      } else {
+        drops.length = newColumns;
+      }
+      columns = newColumns;
+    } else if (Math.abs(newH - h) > 120) {
+      // Ignore minor mobile URL-bar height changes during scroll
+      h = canvas.height = newH;
+    }
+  });
 
   function drawMatrix() {
     if (!matrixRunning) return;
@@ -205,16 +219,35 @@ function initNavigation() {
   const links = document.querySelectorAll(".nav-links a");
 
   if (toggle && navLinks) {
-    toggle.addEventListener("click", () => {
+    const setMenuState = (isOpen) => {
+      navLinks.classList.toggle("open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.innerHTML = isOpen ? "<span>✕</span>" : "<span>☰</span>";
+    };
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       playKeyClick();
-      navLinks.classList.toggle("open");
+      setMenuState(!navLinks.classList.contains("open"));
     });
 
     links.forEach(link => {
       link.addEventListener("click", () => {
         playKeyClick();
-        navLinks.classList.remove("open");
+        setMenuState(false);
       });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+        setMenuState(false);
+      }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navLinks.classList.contains("open")) {
+        setMenuState(false);
+      }
     });
   }
 
